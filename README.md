@@ -1,6 +1,6 @@
 ![Swift](https://github.com/migueldeicaza/SwiftTerm/workflows/Swift/badge.svg)
 
-SwiftTerm
+SwiftTerm -- iOS 11+
 =========
 
 SwiftTerm is a VT100/Xterm terminal emulator for Swift applications that can be embedded
