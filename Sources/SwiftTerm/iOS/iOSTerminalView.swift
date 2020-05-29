@@ -43,7 +43,12 @@ open class TerminalView: UIScrollView, UITextInputTraits, UIKeyInput, UIScrollVi
             let boldItalic: UIFont
             
             static var defaultFont: UIFont {
-                UIFont.monospacedSystemFont (ofSize: 12, weight: .regular)
+                if #available(iOS 13.0, *) {
+                    return UIFont.monospacedSystemFont (ofSize: 12, weight: .regular)
+                } else {
+                    // Fallback on earlier versions
+                    return UIFont.systemFont(ofSize: 12, weight: .regular)
+                }
             }
             
             public init(font baseFont: UIFont) {
@@ -171,7 +176,11 @@ open class TerminalView: UIScrollView, UITextInputTraits, UIKeyInput, UIScrollVi
             let location = gestureRecognizer.location(in: gestureRecognizer.view)
             let menuLocation = CGRect(x: location.x, y: location.y, width: 0, height: 0)
             //menuController.setTargetRect(menuLocation, in: gestureRecognizer.view!)
-            menuController.showMenu(from: gestureRecognizer.view!, rect: menuLocation)
+            if #available(iOS 13.0, *) {
+                menuController.showMenu(from: gestureRecognizer.view!, rect: menuLocation)
+            } else {
+                // Fallback on earlier versions
+            }
             
           }
     }

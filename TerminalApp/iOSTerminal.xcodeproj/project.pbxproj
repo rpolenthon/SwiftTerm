@@ -14,23 +14,7 @@
 		49BD1A63224207B5005A2252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BD1A61224207B5005A2252 /* Main.storyboard */; };
 		49BD1A65224207B7005A2252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BD1A64224207B7005A2252 /* Assets.xcassets */; };
 		49BD1A68224207B7005A2252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BD1A66224207B7005A2252 /* LaunchScreen.storyboard */; };
-		75C57F37245899A900B44A3C /* SwiftSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C57F36245899A900B44A3C /* SwiftSH.framework */; };
-		75C57F38245899A900B44A3C /* SwiftSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75C57F36245899A900B44A3C /* SwiftSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4936D2312451386F005CEE27 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				75C57F38245899A900B44A3C /* SwiftSH.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4936D22024512AF2005CEE27 /* UIKitSshTerminalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitSshTerminalView.swift; sourceTree = "<group>"; };
@@ -51,7 +35,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4959FFDB2447F971001F42C0 /* SwiftTerm in Frameworks */,
-				75C57F37245899A900B44A3C /* SwiftSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,12 +93,10 @@
 				49BD1A56224207B5005A2252 /* Sources */,
 				49BD1A57224207B5005A2252 /* Frameworks */,
 				49BD1A58224207B5005A2252 /* Resources */,
-				4936D2312451386F005CEE27 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				754F9008245445300090E149 /* PBXTargetDependency */,
 			);
 			name = iOSTerminal;
 			packageProductDependencies = (
@@ -184,13 +165,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		754F9008245445300090E149 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 754F9007245445300090E149 /* SwiftTerm */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49BD1A61224207B5005A2252 /* Main.storyboard */ = {
@@ -338,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJQC57N853;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJQC57N853;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,10 +378,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		4959FFDA2447F971001F42C0 /* SwiftTerm */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftTerm;
-		};
-		754F9007245445300090E149 /* SwiftTerm */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftTerm;
 		};

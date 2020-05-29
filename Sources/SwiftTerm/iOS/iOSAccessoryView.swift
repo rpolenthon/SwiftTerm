@@ -149,7 +149,12 @@ public class TerminalAccessory: UIInputView, UIInputViewAudioFeedback {
     func makeAutoRepeatButton (_ iconName: String, _ action: Selector) -> UIButton
     {
         let b = makeButton ("", action)
-        b.setImage(UIImage (systemName: iconName, withConfiguration: UIImage.SymbolConfiguration (pointSize: 14)), for: .normal)
+        if #available(iOS 13.0, *) {
+            b.setImage(UIImage (systemName: iconName, withConfiguration: UIImage.SymbolConfiguration (pointSize: 14)), for: .normal)
+        } else {
+            // Fallback on earlier versions
+            
+        }
         b.addTarget(self, action: #selector(cancelTimer), for: .touchUpOutside)
         b.addTarget(self, action: #selector(cancelTimer), for: .touchCancel)
         b.addTarget(self, action: #selector(cancelTimer), for: .touchUpInside)

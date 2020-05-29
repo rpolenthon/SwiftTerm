@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
         setupKeyboardMonitor()
-        tv = SshTerminalView(frame: makeFrame (keyboardDelta: 0))
+//        tv = SshTerminalView(frame: makeFrame (keyboardDelta: 0))
         view.addSubview(tv)
         tv.becomeFirstResponder()
         tv.feed(text: "Welcome to SwiftTerm - connecting to my localhost\n\n")

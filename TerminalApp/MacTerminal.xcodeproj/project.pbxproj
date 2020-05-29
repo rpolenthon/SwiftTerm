@@ -319,6 +319,7 @@
 				DEVELOPMENT_TEAM = PJQC57N853;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -341,6 +342,7 @@
 				DEVELOPMENT_TEAM = PJQC57N853;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
